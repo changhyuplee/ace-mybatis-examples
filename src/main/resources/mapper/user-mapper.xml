@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.vendigo.examples.acemybatis.UserMapper">
+
+    <select id="selectUsersCount" resultType="int">
+        SELECT count(*) FROM USER
+    </select>
+
+    <select id="selectUsers" resultType="com.github.vendigo.examples.acemybatis.User">
+        SELECT
+        EMAIL as email,
+        FIRST_NAME as firstName,
+        LAST_NAME as lastName,
+        PHONE_NUMBER as phoneNumber,
+        CITY as city,
+        NICKNAME as nickname
+        FROM USER
+    </select>
+</mapper>
