@@ -38,6 +38,7 @@ public class SpringConfig {
     AceMapperScannerConfigurer mapperScannerConfigurer() {
         return AceMapperScannerConfigurer.builder()
                 .basePackage("com.github.vendigo.examples.acemybatis")
+                .selectChunkSize(1000)
                 .build();
     }
 

@@ -18,4 +18,21 @@
         NICKNAME as nickname
         FROM USER
     </select>
+
+    <insert id="insertUsers" parameterType="com.github.vendigo.examples.acemybatis.User">
+        INSERT INTO USER (
+        EMAIL,
+        FIRST_NAME,
+        LAST_NAME,
+        PHONE_NUMBER,
+        CITY,
+        NICKNAME)
+        VALUES
+        (#{email},
+        #{firstName},
+        #{lastName},
+        #{phoneNumber},
+        #{city},
+        #{nickname})
+    </insert>
 </mapper>
